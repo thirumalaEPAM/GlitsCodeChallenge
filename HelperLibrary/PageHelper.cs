@@ -14,11 +14,18 @@ namespace HelperLibrary
 
         IWebDriver webdriver;
         CommonUtility Commonobj;
-
+        /// <summary>
+        /// Button Click method
+        /// </summary>
+        /// <param name="locator"></param>
         public void ButtonClick(By by)
         {
             Commonobj.ClickElement(by);
         }
+        /// <summary>
+        /// Take Screen shot method : This method will call when the scenario fails
+        /// </summary>
+        /// <returns></returns>
         public String TakeScreenshot()
         {
             Screenshot screenshot = ((ITakesScreenshot)webdriver).GetScreenshot();
@@ -33,6 +40,11 @@ namespace HelperLibrary
             Commonobj.SendText(by, text);
         }
 
+        /// <summary>
+        /// Get the Web Element Text
+        /// </summary>
+        /// <param name="locator"></param>
+        /// <returns></returns>
         public string GetText(By by)
         {
             try { return Commonobj.getElementText(by); }
@@ -69,7 +81,6 @@ namespace HelperLibrary
            OTPValue = EmilAuthOTP.GetOTPfromEmailbody(email);
             return OTPValue;
         }
-
 
         public string RondomNum()
         {

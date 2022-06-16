@@ -12,7 +12,11 @@ namespace ObjectRepositoryLibrary
     public class CommonUtility
     {
         IWebDriver webdriver;
-
+        /// <summary>
+        /// Web driver should wait untill element found : Explicite wait
+        /// </summary>
+        /// <param name="elt"></param>
+        /// <returns></returns>
         public IWebElement WaitForElement(By elt)
         {
 
@@ -20,34 +24,40 @@ namespace ObjectRepositoryLibrary
             return wait.Until(X => X.FindElement(elt));
         }
 
+        /// <summary>
+        /// Get the web element text using element.text method
+        /// </summary>
+        /// <param name="elt"></param>
+        /// <returns></returns>
         public String getElementText(By elt)
         {
 
             return WaitForElement(elt).Text.ToString();
         }
 
+        /// <summary>
+        /// Enter the text into input Webelement
+        /// </summary>
+        /// <param name="elt"></param>
+        /// <param name="text"></param>
         public void SendText(By elt, String text)
         {
 
             WaitForElement(elt).SendKeys(text);
 
         }
-
-        public void EnterLocations(By elt, String location)
-        {
-            Actions act = new Actions(webdriver);
-            WaitForElement(elt).SendKeys(location);
-            act.SendKeys(Keys.Down);
-            act.SendKeys(Keys.Enter);
-            act.Perform();
-
-        }
-
+        /// <summary>
+        /// Web Element Click
+        /// </summary>
+        /// <param name="elt"></param>
         public void ClickElement(By elt)
         {
             WaitForElement(elt).Click();
         }
-
+        /// <summary>
+        /// Page scroll to perticular location
+        /// </summary>
+        /// <param name="elt"></param>
         public void pageScroll(By elt)
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)webdriver;
@@ -55,23 +65,22 @@ namespace ObjectRepositoryLibrary
 
         }
 
-
-        public void ClickListWebElements(By by)
-        {
-            IList<IWebElement> elts = webdriver.FindElements(by);
-            elts[elts.Count - 1].Click();
-        }
-        public int CountElements(By by)
-        {
-            IList<IWebElement> elts = webdriver.FindElements(by);
-            return elts.Count;
-        }
+      /// <summary>
+      /// Select the Drop down value
+      /// </summary>
+      /// <param name="by"></param>
+      /// <param name="value"></param>
         public void SelectValue(By by, string value)
         {
             SelectElement sel = new SelectElement(WaitForElement(by));
             sel.SelectByText(value);
 
         }
+
+        /// <summary>
+        /// Page scroll to webelement and perform the click
+        /// </summary>
+        /// <param name="elt"></param>
         public void pageScrollandClick(By elt)
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)webdriver;
@@ -79,6 +88,10 @@ namespace ObjectRepositoryLibrary
 
         }
 
+        /// <summary>
+        /// WebElelement click using Actions Method
+        /// </summary>
+        /// <param name="by"></param>
         public void Mouseclick(By by)
         {
             Actions act = new Actions(webdriver);

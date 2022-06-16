@@ -22,6 +22,11 @@ namespace GlintsMailBoxFrameWork.Hooks
 
         #endregion
 
+        /// <summary>
+        /// Before Sceanrio Execution:
+        ///Initialize Driver Instance
+        ///INitialize the All objects and Initialize the scenario
+        /// </summary>
         [BeforeScenario]
         public void BeforeScenarioWithTag()
         {
@@ -31,7 +36,9 @@ namespace GlintsMailBoxFrameWork.Hooks
             help = new PageHelper(driver);
             Sceanrio = Feature.CreateNode<Scenario>(ScenarioContext.Current.ScenarioInfo.Title);
         }
-
+        /// <summary>
+        /// Initialize the Extent Report
+        /// </summary>
         [BeforeTestRun]
         public static void InitializeReport()
         {
@@ -42,7 +49,9 @@ namespace GlintsMailBoxFrameWork.Hooks
             extent = new AventStack.ExtentReports.ExtentReports();
             extent.AttachReporter(htmlreporter);
         }
-
+        /// <summary>
+        /// Clean the Test Scenario
+        /// </summary>
         [AfterTestRun]
         public static void CleanupReport()
         {

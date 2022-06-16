@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="0" runstate="Runnable" testcasecount="1" result="Passed" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1" engine-version="3.15.0.0" clr-version="4.0.30319.42000" start-time="2022-05-26 05:14:53Z" end-time="2022-05-26 05:15:03Z" duration="10.299607">
+  <command-line><![CDATA[nunit3-console.exe  "C:\Thirumala\PersonalDocs\SampleBDD\SampleBDD\bin\Debug\net6.0\SampleBDD.dll"]]></command-line>
+  <test-suite type="Assembly" id="1-1003" name="SampleBDD.dll" fullname="C:/Thirumala/PersonalDocs/SampleBDD/SampleBDD/bin/Debug/net6.0/SampleBDD.dll" runstate="Runnable" testcasecount="1" result="Passed" start-time="2022-05-26T05:14:53.3410882Z" end-time="2022-05-26T05:15:03.3155976Z" duration="9.974465" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
+    <environment framework-version="3.13.2.0" clr-version="6.0.5" os-version="Microsoft Windows 10.0.19044" platform="Win32NT" cwd="C:\Users\Thirumala_Rajolu\.nuget\packages\nunit.consolerunner\3.15.0\tools" machine-name="EPINHYDW0E79" user="Thirumala_Rajolu" user-domain="EPAM" culture="en-IN" uiculture="en-US" os-architecture="x64" />
+    <settings>
+      <setting name="DisposeRunners" value="True" />
+      <setting name="WorkDirectory" value="C:\Users\Thirumala_Rajolu\.nuget\packages\nunit.consolerunner\3.15.0\tools" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETCoreApp,Version=v6.0" />
+      <setting name="ImageRequiresX86" value="False" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="TargetRuntimeFramework" value="netcore-6.0" />
+      <setting name="NumberOfTestWorkers" value="8" />
+    </settings>
+    <properties>
+      <property name="_PID" value="29512" />
+      <property name="_APPDOMAIN" value="nunit-agent" />
+    </properties>
+    <test-suite type="SetUpFixture" id="1-1000" name="[default namespace]" fullname="SampleBDD_NUnitAssemblyHooks" classname="SampleBDD_NUnitAssemblyHooks" runstate="Runnable" testcasecount="1" result="Passed" start-time="2022-05-26T05:14:53.3459703Z" end-time="2022-05-26T05:15:03.3155249Z" duration="9.969555" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
+      <output><![CDATA[-> Loading plugin C:\Thirumala\PersonalDocs\SampleBDD\SampleBDD\bin\Debug\net6.0\LivingDoc.SpecFlowPlugin.dll
+-> Loading plugin C:\Thirumala\PersonalDocs\SampleBDD\SampleBDD\bin\Debug\net6.0\TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll
+-> Loading plugin C:\Thirumala\PersonalDocs\SampleBDD\SampleBDD\bin\Debug\net6.0\SampleBDD.dll
+-> Using default config
+-> LivingDocPlugin: Output generated in: C:\Thirumala\PersonalDocs\SampleBDD\SampleBDD\bin\Debug\net6.0\TestExecution.json
+]]></output>
+      <test-suite type="TestSuite" id="1-1004" name="SampleBDD" fullname="SampleBDD" runstate="Runnable" testcasecount="1" result="Passed" start-time="2022-05-26T05:14:53.5423250Z" end-time="2022-05-26T05:15:02.8283302Z" duration="9.286005" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
+        <test-suite type="TestSuite" id="1-1005" name="Features" fullname="SampleBDD.Features" runstate="Runnable" testcasecount="1" result="Passed" start-time="2022-05-26T05:14:53.5423592Z" end-time="2022-05-26T05:15:02.8283214Z" duration="9.285962" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
+          <test-suite type="TestFixture" id="1-1001" name="OrangeHRMLoginPageValidationFeature" fullname="SampleBDD.Features.OrangeHRMLoginPageValidationFeature" classname="SampleBDD.Features.OrangeHRMLoginPageValidationFeature" runstate="Runnable" testcasecount="1" result="Passed" start-time="2022-05-26T05:14:53.5423823Z" end-time="2022-05-26T05:15:02.8281280Z" duration="9.285746" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
+            <properties>
+              <property name="Description" value="Orange HRM login page validation" />
+            </properties>
+            <test-case id="1-1002" name="ICanAbleToLoginOrangeHRMPageSuccessfully" fullname="SampleBDD.Features.OrangeHRMLoginPageValidationFeature.ICanAbleToLoginOrangeHRMPageSuccessfully" methodname="ICanAbleToLoginOrangeHRMPageSuccessfully" classname="SampleBDD.Features.OrangeHRMLoginPageValidationFeature" runstate="Runnable" seed="248771619" result="Passed" start-time="2022-05-26T05:14:53.5440419Z" end-time="2022-05-26T05:15:02.8258322Z" duration="9.281857" asserts="1">
+              <properties>
+                <property name="Description" value="I can able to login Orange HRM page successfully" />
+              </properties>
+              <output><![CDATA[Given Launch the Orange hrm application and Enter valid username "Admin" and password "admin123"
+-> done: OrangeHRMLoginPageValidationStepDefinitions.GivenLaunchTheOrangeHrmApplicationAndEnterValidUsernameAndPassword("Admin", "admin123") (0.1s)
+When I click on Login button
+-> done: OrangeHRMLoginPageValidationStepDefinitions.WhenIClickOnLoginButton() (4.1s)
+Then I can enter into OrangeHRM homepage and view the "Dashboard"
+-> done: OrangeHRMLoginPageValidationStepDefinitions.ThenICanEnterIntoOrangeHRMHomepageAndViewThe("Dashboard") (0.0s)
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

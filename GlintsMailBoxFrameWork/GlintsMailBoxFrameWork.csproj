@@ -472,9 +472,7 @@
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.1.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.1.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Screenshots\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\HelperLibrary\HelperLibrary.csproj">
       <Project>{0134fab7-fba7-41fe-a404-ace65883f33c}</Project>
@@ -484,6 +482,12 @@
       <Project>{6c3c9070-b8df-41d8-b4f7-f19b29af667d}</Project>
       <Name>ObjectRepositoryLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Screenshots\6152022 21942 PM.png" />
+    <Content Include="Screenshots\6192022 124533 AM.png" />
+    <Content Include="Screenshots\6192022 124744 AM.png" />
+    <Content Include="Screenshots\6192022 125626 AM.png" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

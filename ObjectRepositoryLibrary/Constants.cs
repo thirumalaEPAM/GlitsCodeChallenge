@@ -23,6 +23,8 @@ namespace ObjectRepositoryLibrary
         public static string newEmail = "";
         public static string newPassWord = "";
         public static int waittime = 10000;
+        public static string outlook="outlook";
+        public static string Continue = "Continue";
         #endregion
     }
 }

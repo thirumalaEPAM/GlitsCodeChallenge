@@ -48,7 +48,7 @@ namespace HelperLibrary
         public string GetText(By by)
         {
             try { return Commonobj.getElementText(by); }
-            catch { return "NotMactch"; }
+            catch { return "NotMatch"; }
        
         }
         /// <summary>
@@ -90,19 +90,20 @@ namespace HelperLibrary
         {
             try
             {
-                System.Threading.Thread.Sleep(Constants.waittime);
+                string[,] data = ExcelData.getData();
+                System.Threading.Thread.Sleep(Constants.waittime);                
                 Commonobj.ClickElement(RegisterPageRepo.elementBusinessType);
                 Commonobj.pageScroll(RegisterPageRepo.elementContinue);
                 Commonobj.ClickElement(RegisterPageRepo.elementContinue);
                 System.Threading.Thread.Sleep(Constants.waittime);
-                Commonobj.SendText(RegisterPageRepo.elementFullName, "New Sdet Role");
-                Commonobj.SendText(RegisterPageRepo.elementPrefferedName, "Test Automation");
-                Commonobj.SendText(RegisterPageRepo.elementEmail, "newTest@gmail.com");
-                Constants.newEmail = "newTest@gmail.com";
-                Constants.newPassWord = "Test1233";
+                Commonobj.SendText(RegisterPageRepo.elementFullName, data[2,2]);
+                Commonobj.SendText(RegisterPageRepo.elementPrefferedName, data[3,2]);
+                Commonobj.SendText(RegisterPageRepo.elementEmail, data[4,2]);
+                Constants.newEmail = data[4, 2];
+                Constants.newPassWord = data[5, 2];
                 Commonobj.pageScroll(RegisterPageRepo.elementPhone);
-                Commonobj.SendText(RegisterPageRepo.elementPhone, "90908877");
-                Commonobj.SelectValue(RegisterPageRepo.elementSpcialSiteName, "LinkedIn");                
+                Commonobj.SendText(RegisterPageRepo.elementPhone, data[6, 2]);
+                Commonobj.SelectValue(RegisterPageRepo.elementSpcialSiteName, data[7, 2]);                
                 Commonobj.ClickElement(RegisterPageRepo.elementTC);
                 Commonobj.pageScroll(RegisterPageRepo.elementContinue);
                 Commonobj.ClickElement(RegisterPageRepo.elementContinue);

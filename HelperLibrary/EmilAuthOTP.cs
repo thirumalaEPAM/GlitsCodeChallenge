@@ -18,17 +18,17 @@ namespace HelperLibrary
             ExchangeService exchangeService = new ExchangeService(ExchangeVersion.Exchange2007_SP1);
             if (email == Constants.email1)
             {
-                exchangeService.Credentials = new WebCredentials(Constants.email1, Constants.password1, "outlook");
+                exchangeService.Credentials = new WebCredentials(Constants.email1, Constants.password1, Constants.outlook);
                 exchangeService.AutodiscoverUrl(Constants.email1);
             }
             else if (email == Constants.email2)
             { 
-                exchangeService.Credentials = new WebCredentials(Constants.email2, Constants.password2, "outlook");
+                exchangeService.Credentials = new WebCredentials(Constants.email2, Constants.password2, Constants.outlook);
                 exchangeService.AutodiscoverUrl(Constants.email2);
             }
              else
             {
-                exchangeService.Credentials = new WebCredentials(Constants.newEmail, Constants.newPassWord, "outlook");
+                exchangeService.Credentials = new WebCredentials(Constants.newEmail, Constants.newPassWord, Constants.outlook);
                 exchangeService.AutodiscoverUrl(Constants.newEmail);
             }
 

@@ -78,8 +78,8 @@ namespace GlintsMailBoxFrameWork.StepDefination
         [Then(@"Verify user registered successfully")]
         public void ThenVerifyUserRegisteredSuccessfully()
         {
-            string start = MyHook.help.GetText(SignInPageRepo.elementgetStarted);
-            Assert.AreEqual(start, Constants.getStarted);
+            string start = MyHook.help.GetText(RegisterPageRepo.elementContinue);
+            Assert.AreEqual(start, Constants.Continue);
         }
 
     }

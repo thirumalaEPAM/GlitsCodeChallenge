@@ -51,4 +51,18 @@ And Get the OTP from Mailbox and Enter into OTP field
 Then Verify user registered successfully
 
 ```
+ ## 03 - Brief Description about framework Approach
+ - Reports created using ExtentReports and ScreenShots captured for failed scenarios
+ 
+ - In Project solution 
+     ###### 1. ObjectRepsitoryLibrary : 
+      which contains common utilities, locators (defined in page classfiles), SingletonBaseclass 
+       
+    ###### 2. HelperLibrary : 
+     which contains the methods which are specific to the respective pages
+       
+    ###### 4. BDDFramework(SpecFlow Project) 
+       Feature files
+       Stepdefination files
+       Hooks
 

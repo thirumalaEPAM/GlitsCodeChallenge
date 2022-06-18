@@ -11,13 +11,15 @@ namespace ObjectRepositoryLibrary
     public class SingletonBaseClass
     {
 
-        /**
-         * Single Design pattern  - ChromeDriver Object initialization
+        /**Single Design pattern  - ChromeDriver Object initialization
+         * 
          * **/
         private IWebDriver driver = null;
 
         private static SingletonBaseClass instance = null;
-        /** Private Constuctor **/
+        /**Private Constuctor
+        *
+        **/
         private SingletonBaseClass()
         {
             driver = new ChromeDriver();
@@ -38,6 +40,10 @@ namespace ObjectRepositoryLibrary
         {
             return driver;
         }
+
+        /// <summary>
+        /// Launch the browser , Maximize it and defined the implicite wait
+        /// </summary>
         public void launchBrowser()
         {
             driver.Navigate().GoToUrl("https://app.aspireapp.com/");

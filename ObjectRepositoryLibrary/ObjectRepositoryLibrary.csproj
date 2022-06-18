@@ -53,6 +53,7 @@
     <Compile Include="CommonUtility.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterPageRepo.cs" />
     <Compile Include="SignInPageRepo.cs" />
     <Compile Include="SingletonBaseClass.cs" />
   </ItemGroup>

@@ -20,6 +20,8 @@ namespace ObjectRepositoryLibrary
         public static string email2 = "MynameisSdet@outlook.com";
         public static string password2 = "sdet@12345";
         public static string getStarted = "Get Started";
+        public static string newEmail = "";
+        public static string newPassWord = "";
         public static int waittime = 10000;
         #endregion
     }

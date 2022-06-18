@@ -41,10 +41,17 @@ namespace ObjectRepositoryLibrary
         /// <param name="elt"></param>
         /// <param name="text"></param>
         public void SendText(By elt, String text)
-        {
-
+        {           
             WaitForElement(elt).SendKeys(text);
 
+        }
+        public void SelectValue(By elt, String text)
+        {
+            Actions act = new Actions(webdriver);
+            webdriver.FindElement(elt).SendKeys(text);
+            act.SendKeys(Keys.Down);
+            act.SendKeys(Keys.Enter);
+            act.Perform();
         }
         /// <summary>
         /// Web Element Click
@@ -70,7 +77,7 @@ namespace ObjectRepositoryLibrary
       /// </summary>
       /// <param name="by"></param>
       /// <param name="value"></param>
-        public void SelectValue(By by, string value)
+        public void SelectValue1(By by, string value)
         {
             SelectElement sel = new SelectElement(WaitForElement(by));
             sel.SelectByText(value);

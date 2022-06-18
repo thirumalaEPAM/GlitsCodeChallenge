@@ -21,12 +21,17 @@ namespace HelperLibrary
                 exchangeService.Credentials = new WebCredentials(Constants.email1, Constants.password1, "outlook");
                 exchangeService.AutodiscoverUrl(Constants.email1);
             }
-            else
+            else if (email == Constants.email2)
             { 
                 exchangeService.Credentials = new WebCredentials(Constants.email2, Constants.password2, "outlook");
                 exchangeService.AutodiscoverUrl(Constants.email2);
             }
-           
+             else
+            {
+                exchangeService.Credentials = new WebCredentials(Constants.newEmail, Constants.newPassWord, "outlook");
+                exchangeService.AutodiscoverUrl(Constants.newEmail);
+            }
+
             if (exchangeService != null)
             {
                 FindItemsResults<Item> results = exchangeService.FindItems(WellKnownFolderName.Inbox, new ItemView(100));

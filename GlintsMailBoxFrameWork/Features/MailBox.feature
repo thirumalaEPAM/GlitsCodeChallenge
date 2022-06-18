@@ -12,3 +12,9 @@ Examples:
 | Email                   | 
 |MynameisSdet@outlook.com| 
 |thirumalasdet@outlook.com| 
+
+Scenario: Verify new user can register his mail using register link
+Given Launch the Application and Click on Register Link
+When Fill all mandatory data and Click on Continue
+And Get the OTP from Mailbox and Enter into OTP field
+Then Verify user registered successfully

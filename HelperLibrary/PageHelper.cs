@@ -82,6 +82,36 @@ namespace HelperLibrary
             return OTPValue;
         }
 
+        /// <summary>
+        /// New Registrations, Enter all mandatory data by Using Data driven
+        /// </summary>
+        /// <returns></returns>
+        public void NewRegistration()
+        {
+            try
+            {
+                System.Threading.Thread.Sleep(Constants.waittime);
+                Commonobj.ClickElement(RegisterPageRepo.elementBusinessType);
+                Commonobj.pageScroll(RegisterPageRepo.elementContinue);
+                Commonobj.ClickElement(RegisterPageRepo.elementContinue);
+                System.Threading.Thread.Sleep(Constants.waittime);
+                Commonobj.SendText(RegisterPageRepo.elementFullName, "New Sdet Role");
+                Commonobj.SendText(RegisterPageRepo.elementPrefferedName, "Test Automation");
+                Commonobj.SendText(RegisterPageRepo.elementEmail, "newTest@gmail.com");
+                Constants.newEmail = "newTest@gmail.com";
+                Constants.newPassWord = "Test1233";
+                Commonobj.pageScroll(RegisterPageRepo.elementPhone);
+                Commonobj.SendText(RegisterPageRepo.elementPhone, "90908877");
+                Commonobj.SelectValue(RegisterPageRepo.elementSpcialSiteName, "LinkedIn");                
+                Commonobj.ClickElement(RegisterPageRepo.elementTC);
+                Commonobj.pageScroll(RegisterPageRepo.elementContinue);
+                Commonobj.ClickElement(RegisterPageRepo.elementContinue);
+            }
+            catch (Exception ex) { }
+            
+
+
+        }
         public string RondomNum()
         {
 

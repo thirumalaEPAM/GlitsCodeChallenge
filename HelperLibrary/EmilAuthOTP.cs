@@ -15,22 +15,14 @@ namespace HelperLibrary
         public static string GetOTPfromEmailbody(string email)
         {
             String OTPValue = string.Empty;
+            string password=string.Empty;
             ExchangeService exchangeService = new ExchangeService(ExchangeVersion.Exchange2007_SP1);
-            if (email == Constants.email1)
-            {
-                exchangeService.Credentials = new WebCredentials(Constants.email1, Constants.password1, Constants.outlook);
-                exchangeService.AutodiscoverUrl(Constants.email1);
-            }
-            else if (email == Constants.email2)
-            { 
-                exchangeService.Credentials = new WebCredentials(Constants.email2, Constants.password2, Constants.outlook);
-                exchangeService.AutodiscoverUrl(Constants.email2);
-            }
-             else
-            {
-                exchangeService.Credentials = new WebCredentials(Constants.newEmail, Constants.newPassWord, Constants.outlook);
-                exchangeService.AutodiscoverUrl(Constants.newEmail);
-            }
+            if (email == Constants.email1) password = Constants.password1;
+            else if (email == Constants.email2) password = Constants.password2;
+            else password = Constants.newPassWord;
+
+            exchangeService.Credentials = new WebCredentials(email, password, Constants.outlook);
+            exchangeService.AutodiscoverUrl(email);            
 
             if (exchangeService != null)
             {
